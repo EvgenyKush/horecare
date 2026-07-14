@@ -4,7 +4,7 @@ FROM nginx:1.27-alpine
 COPY hosting/nginx.conf /etc/nginx/conf.d/default.conf
 COPY hosting/index.html hosting/bridge.js hosting/style.css /usr/share/nginx/html/
 RUN mkdir -p /usr/share/nginx/html/assets
-COPY hosting/assets/coffee-box.png /usr/share/nginx/html/assets/coffee-box.png
+COPY hosting/assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 8080
 
