@@ -1,0 +1,5 @@
+README.txt
+fly.toml
+.dockerignore
+deploy.ps1
+Dockerfile.root-context
