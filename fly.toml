@@ -1,24 +1,24 @@
-# Deploy FROM hosting/ folder (after build.py):
-#   cd ..
-#   python build.py
-#   cd hosting
-#   fly deploy
+# fly.toml app configuration file generated for horecare on 2026-07-14T12:50:28Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "horecare"
-primary_region = "fra"
+app = 'horecare'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
